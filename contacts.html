@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="icon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRMS Client</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, Arial, sans-serif;
+      background: #780602;
+      color: #f9fbfe;
+    }
+
+    .card {
+      width: min(90%, 500px);
+      background: #27043f;
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #f4f4f5;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .primary {
+  background: #ff0000;
+  color: white;
+    }
+
+    .primary:hover {
+      background: #ff0000;
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      background: #ff0000;
+      color: #ffffff;
+    }
+
+    .secondary:hover {
+      background: #ff0000;
+      transform: translateY(-2px);
+    }
+
+    .outline {
+      background: transparent;
+      color: #333434;
+      border: 1px solid #d1d5db;
+    }
+
+    .outline:hover {
+      background: #f9fafb;
+      transform: translateY(-2px);
+    }
+
+    .danger {
+      background: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .danger:hover {
+      background: #fecaca;
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    selector {
+  property: value;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Welcome to contact page!</h1>
+
+  <a class="button secondary" href="https://discord.com/invite/cjEAXVQn36">
+    Join our Discord for updates and support
+  </a>
+
+  <a class="button secondary" href="https://t.me/KRMSClientSupport">
+    Text us for support (Telegram)
+  </a>
+  
+  <a class="button secondary" href="https://t.me/KRMSClient">
+    Join our Telegram channel for updates
+  </a>
+  
+    </div>
+  </div>
+
+</body>
+</html>
