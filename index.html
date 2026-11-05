@@ -1,150 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="icon.png" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KRMS Client</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Inter, Arial, sans-serif;
-      background: #780602;
-      color: #f9fbfe;
-    }
-
-    .card {
-      width: min(90%, 500px);
-      background: #27043f;
-      border-radius: 24px;
-      padding: 50px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 30px;
-    }
-
-    p {
-      margin-bottom: 30px;
-      color: #f4f4f5;
-    }
-
-    .buttons {
-      display: grid;
-      gap: 12px;
-    }
-
-    button {
-      display: block;
-      width: 100%;
-      padding: 14px 20px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .primary {
-  background: #ff0000;
-  color: white;
-    }
-
-    .primary:hover {
-      background: #ff0000;
-      transform: translateY(-2px);
-    }
-
-    .secondary {
-      background: #ff0000;
-      color: #ffffff;
-    }
-
-    .secondary:hover {
-      background: #ff0000;
-      transform: translateY(-2px);
-    }
-
-    .outline {
-      background: transparent;
-      color: #333434;
-      border: 1px solid #d1d5db;
-    }
-
-    .outline:hover {
-      background: #f9fafb;
-      transform: translateY(-2px);
-    }
-
-    .danger {
-      background: #fee2e2;
-      color: #b91c1c;
-    }
-
-    .danger:hover {
-      background: #fecaca;
-      transform: translateY(-2px);
-    }
-
-    button:active {
-      transform: translateY(0);
-    }
-
-    selector {
-  property: value;
-}
-
-  </style>
+    <link rel="icon" href="icon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRMS Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #780602;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="card">
-    <h1>Welcome to KRMS Client</h1>
-    <p>Make your Minecraft better</p>
-    <p>ℹ️Contacts are moved into new page</p>
 
-<div class="buttons">
-  <a class="button primary" href="https://github.com/krmsclient/krmsclient.github.io/releases/download/Release/KRMSClient.zip">
-    Get the modpack directly
-  </a>
-
-  <a class="button primary" href="https://github.com/krmsclient/krmsclient.github.io/releases/download/Release/KRMSClient67.zip">
-    Get the modpack directly (67Client)
-  </a>
-
-  <a class="button secondary" href="https://github.com/ElyPrismLauncher/Launcher/releases/download/11.1.1/PineconeMC-Windows-MinGW-w64-Setup-11.1.1.exe">
-    Get PineconeMC (formerly ElyPrismLauncher) 
-  </a>
-  
-  <a class="button secondary" href="https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.1/PrismLauncher-Windows-MinGW-w64-Setup-11.1.1.exe">
-    Get Prism Launcher
-  </a>
-
-   <a class="button secondary" href="https://krmsclient.github.io/contacts.html">
-    Contact page
-  </a>
-  
-  <a class="button secondary" href="https://krmsclient.github.io/screenshots.html">
-    Screenshots
-  </a>
-
-    </div>
-  </div>
+<div class="login-container">
+    <h2>KRMS Client login page</h2>
+    <form action="/submit-login" method="POST">
+        <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+    </form>
+</div>
 
 </body>
-</html>
+</html>   
